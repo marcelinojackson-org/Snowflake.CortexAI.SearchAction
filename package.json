@@ -1,0 +1,33 @@
+{
+  "name": "snowflake-cortexai-search-action",
+  "version": "1.0.0",
+  "description": "GitHub Action that calls Snowflake Cortex Search via the shared common library",
+  "main": "dist/snowflake-cortex-search.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && npm run bundle",
+    "bundle": "ncc build lib/snowflake-cortex-search.js -o dist && mv dist/index.js dist/snowflake-cortex-search.js && if [ -f dist/index.js.map ]; then mv dist/index.js.map dist/snowflake-cortex-search.js.map; fi",
+    "prepare": "npm run build",
+    "test": "echo \"No tests yet - add integration tests\" && exit 0"
+  },
+  "files": [
+    "dist",
+    "action.yml",
+    "README.md"
+  ],
+  "keywords": [
+    "snowflake",
+    "cortex",
+    "search",
+    "github-actions"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@marcelinojackson-org/snowflake-common": "file:../Snowflake.Common"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.1",
+    "typescript": "^5.4.5"
+  }
+}

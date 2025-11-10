@@ -1,0 +1,43 @@
+name: "Snowflake.CortexAI.Search"
+description: "Execute a Cortex Search query against Snowflake"
+author: "Marcelino Jackson"
+branding:
+  icon: "search"
+  color: "blue"
+inputs:
+  service-name:
+    description: "Fully-qualified Cortex Search service (DB.SCHEMA.SERVICE)."
+    required: false
+  query:
+    description: "Natural language query for Cortex Search."
+    required: false
+  limit:
+    description: "Maximum hits to request (defaults to 3 if omitted)."
+    required: false
+  filter:
+    description: "Optional JSON filter per Cortex Search API."
+    required: false
+  fields:
+    description: "Comma-separated list or JSON array of fields to include."
+    required: false
+  offset:
+    description: "Skip the first N hits (pagination)."
+    required: false
+  include-scores:
+    description: "Set to true to include relevance scores in the response."
+    required: false
+  score-threshold:
+    description: "Only include hits whose scores meet this threshold."
+    required: false
+  reranker:
+    description: "Optional reranker model name."
+    required: false
+  ranking-profile:
+    description: "Optional ranking profile to apply."
+    required: false
+outputs:
+  result-json:
+    description: "Stringified JSON response from Cortex Search."
+runs:
+  using: "node20"
+  main: "dist/snowflake-cortex-search.js"
