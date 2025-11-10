@@ -1,6 +1,6 @@
 {
   "name": "snowflake-cortexai-search-action",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "GitHub Action that calls Snowflake Cortex Search via the shared common library",
   "main": "dist/snowflake-cortex-search.js",
   "scripts": {
