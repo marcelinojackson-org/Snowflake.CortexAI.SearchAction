@@ -1,4 +1,4 @@
-# Snowflake.CortexAI.Search
+# Snowflake.CortexAI.SearchAction
 
 GitHub Action that executes a single Cortex Search query against Snowflake and returns the JSON response (including the original natural-language query).
 
@@ -22,7 +22,7 @@ GitHub Action that executes a single Cortex Search query against Snowflake and r
 
 ```yaml
 - name: Run Cortex Search
-  uses: marcelinojackson-org/Snowflake.CortexAI.Search@v1
+  uses: marcelinojackson-org/Snowflake.CortexAI.SearchAction@v1
   with:
     service-name: ${{ vars.SEARCH_SERVICE }}
     query: "Find orders with complaints about delivery"
@@ -37,7 +37,7 @@ GitHub Action that executes a single Cortex Search query against Snowflake and r
 ```yaml
 - name: Run Cortex Search (advanced)
   id: cortex
-  uses: marcelinojackson-org/Snowflake.CortexAI.Search@v1
+  uses: marcelinojackson-org/Snowflake.CortexAI.SearchAction@v1
   with:
     service-name: ${{ vars.SEARCH_SERVICE }}
     query: ${{ vars.SEARCH_QUERY }}

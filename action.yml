@@ -1,4 +1,4 @@
-name: "Snowflake.CortexAI.Search"
+name: "Snowflake.CortexAI.SearchAction"
 description: "Execute a Cortex Search query against Snowflake"
 author: "Marcelino Jackson"
 branding:
